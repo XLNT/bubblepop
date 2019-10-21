@@ -1,0 +1,26 @@
+{
+  "name": "local-mobile-foam",
+  "version": "1.0.0",
+  "description": "Finds POIs near you that need additional data.",
+  "main": "index.js",
+  "repository": "https://github.com/XLNT/local-mobile-foam",
+  "author": "Matt Condon (shrugs) <matt@bydot.app>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "dependencies": {
+    "@koa/router": "^8.0.2",
+    "bn.js": "^5.0.0",
+    "isomorphic-fetch": "^2.2.1",
+    "koa": "^2.10.0",
+    "koa-bodyparser": "^4.2.1"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "docker build -t shrugs/local-mobile-foam:latest .",
+    "push": "docker push shrugs/local-mobile-foam:latest"
+  }
+}
