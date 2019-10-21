@@ -4,6 +4,43 @@ Find nearby POIs that are in challenge or application mode, meaning you can walk
 
 ![demo](/demo.png)
 
+## Running Locally
+
+1) Run the server and expose it to the internet.
+
+```bash
+yarn run
+```
+
+2) run the app
+
+```bash
+flutter run
+```
+
+## Running on Your Device
+
+1) run the server and expose it to the internet.
+
+```bash
+yarn run
+ngrok http 3000
+```
+
+2) update the `kHost` variable to use your host
+
+3) (ios) do signing things
+
+figure this out on your own, i'm so sorry.
+
+4) run on device
+
+```bash
+flutter devices
+
+flutter run --release -d <device_id>
+```
+
 ## Usage
 
 You can run the server side bits with `node index.js` or use the dockerfile built with `yarn build`.

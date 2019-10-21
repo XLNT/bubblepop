@@ -13,6 +13,9 @@ import 'package:http/http.dart' as http;
 final decimals = BigInt.from(math.pow(10, 18));
 final extent = 0.009; // about 1k in either direction
 
+// change this, probably
+final kHost = 'http://localhost:3000';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -52,7 +55,7 @@ class Page extends HookWidget {
         final neLng = _position.value.longitude + extent;
         final neLat = _position.value.latitude + extent;
         debugPrint("$swLng, $swLat, $neLng, $neLat");
-        final res = await http.post("http://localhost:3000/location",
+        final res = await http.post("$kHost/location",
             headers: {"Content-Type": "application/json"},
             body: json.encode({
               "swLng": swLng,
